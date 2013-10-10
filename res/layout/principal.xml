@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+	android:id="@+id/widget0"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<EditText
+	android:id="@+id/correo"
+	android:layout_width="280dp"
+	android:layout_height="wrap_content"
+	android:text="Correo"
+	android:textSize="18sp"
+	android:layout_x="11dp"
+	android:layout_y="60dp" />
+<EditText
+	android:id="@+id/password"
+	android:layout_width="273dp"
+	android:layout_height="wrap_content"
+	android:text="Pass"
+	android:textSize="18sp"
+	android:password="true"
+	android:layout_x="15dp"
+	android:layout_y="133dp" />
+<Button
+	android:id="@+id/boton"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="INICIAR"
+	android:layout_x="91dp"
+	android:layout_y="264dp" 
+	android:onClick="InterfaceGrupos"/>
+</AbsoluteLayout>
