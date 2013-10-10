@@ -8,6 +8,8 @@ import java.util.ArrayList;
  * Created by victor on 10-10-13.
  */
 public class ListaGrupos extends Activity {
-    ArrayList <String> listaGrupo = new ArrayList<String>(); // Puedo obtener datos desde el telefono.
-
+    ArrayList <String> ListaGrupo = new ArrayList<String>(); // Puedo obtener datos desde el telefono.
+    ListaGrupo.add("Hola");
+    ListaGrupo.add("Como");
+    ListaGrupo.add("estas");
 }
