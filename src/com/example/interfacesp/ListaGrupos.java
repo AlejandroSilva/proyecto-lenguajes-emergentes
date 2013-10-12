@@ -7,9 +7,13 @@ import java.util.ArrayList;
 /**
  * Created by victor on 10-10-13.
  */
-public class ListaGrupos extends Activity {
+public class ListaGrupos{
+
+    public ArrayList <String> getLista(){
     ArrayList <String> ListaGrupo = new ArrayList<String>(); // Puedo obtener datos desde el telefono.
-    ListaGrupo.add("Hola");
-    ListaGrupo.add("Como");
-    ListaGrupo.add("estas");
+        ListaGrupo.add("Hola");
+        ListaGrupo.add("Como");
+        ListaGrupo.add("estas");
+        return ListaGrupo;
+    }
 }

@@ -22,16 +22,20 @@ public class InterfaceGrupos extends ListActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.interfacegrupo1);
 		
 		
 		ArrayList<String> locales = new ArrayList<String>();
-		locales.add("Grupo 1");
-		locales.add("Grupo 2");
-		locales.add("Grupo 3");
-		
+        ListaGrupos lista = new ListaGrupos();
+        locales = lista.getLista();
+
+
+		//locales.add("Grupo 1");
+		//locales.add("Grupo 2");
+		//locales.add("Grupo 3");
+
 		
 		IconListViewAdapter ilva = new IconListViewAdapter(this, R.layout.interfacegrupo, locales );
 		setListAdapter(ilva);
