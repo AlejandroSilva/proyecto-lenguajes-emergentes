@@ -1,33 +1,18 @@
 package servicios;
-
-import java.util.Calendar;
-
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.app.Service;
-import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
 import android.widget.Toast;
 
 public class ServicioMensajes extends Service {
-	       //MediaPlayer reproductor;
 	 
 	       @Override
 	       public void onCreate() {
-	             Toast.makeText(this,"Servicio creado", Toast.LENGTH_SHORT).show();
-	             Log.i("SERVICE", "servicio creado");
+	             //Toast.makeText(this,"Servicio creado", Toast.LENGTH_SHORT).show();
+	             //Log.i("SERVICE", "servicio creado");
 	       }
 	       
-	       /*
-	       @Override
-	       public void onStart(Intent intent, int idArranque) {
-	              Toast.makeText(this, "Servicio arrancado " + idArranque,Toast.LENGTH_SHORT).show();
-	              Log.i("SERVICE", "servicio arrancado "+idArranque);
-	              //reproductor.start();
-	       }
-	        */
 	       /**
 	       		intent		intent usado en startService( intent );
 	       		flags		Información sobre como comienza la solicitud. Puede ser: 0, START_FLAG_REDELIVERY, START_FLAG_RETRY. 
@@ -37,7 +22,7 @@ public class ServicioMensajes extends Service {
 	       */
 	       @Override
 	       public int onStartCommand(Intent intent, int flags, int idArranque) {
-	             Toast.makeText(this,"Servicio "+idArranque+" arrancado ", Toast.LENGTH_SHORT).show();
+	             //Toast.makeText(this,"Servicio "+idArranque+" arrancado ", Toast.LENGTH_SHORT).show();
 	             Log.i("SERVICE", "Servicio "+idArranque+" arrancado ");
 	             	             
 	             // revisar si hay mensajes nuevos
@@ -48,7 +33,7 @@ public class ServicioMensajes extends Service {
 	 
 	       @Override
 	       public void onDestroy() {
-	             Toast.makeText(this,"Servicio detenido", Toast.LENGTH_SHORT).show();
+	             //Toast.makeText(this,"Servicio detenido", Toast.LENGTH_SHORT).show();
 	             Log.i("SERVICE", "servicio detenido");
 	       }
 	 

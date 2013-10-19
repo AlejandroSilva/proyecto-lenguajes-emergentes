@@ -17,16 +17,16 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
     	if (!intent.getAction().equals(WifiManager.NETWORK_STATE_CHANGED_ACTION) &&
     			!intent.getAction().equals(ConnectivityManager.CONNECTIVITY_ACTION) &&
     			!intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)){
-    		Log.i("CONNECTION", "ignorar accion");
+    		//Log.i("CONNECTION", "ignorar accion");
     		return;
     	}
     	
     	if( isConnected(context) ){
-    		Log.i("CONNECTION", "esta conectado");
+    		Log.i("SERVICE", "esta conectado a la red, iniciando servicio");
     		ServiceConfig.startService( context );
     	}
     	else{
-    		Log.i("CONNECTION", "esta DESconectado");
+    		Log.i("SERVICE", "se ha desconectado de la red, deteniendo servicio");
     		ServiceConfig.stopService(context);
     	}
     }
