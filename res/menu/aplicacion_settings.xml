@@ -1,0 +1,5 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/settings_groups" android:title="Grupos" android:icon="@android:drawable/ic_menu_add"/>
+    <item android:id="@+id/settings_user" android:title="Usuario" android:icon="@android:drawable/ic_menu_manage"/>
+    <item android:id="@+id/settings_application" android:showAsAction="never" android:title="Configuración" android:icon="@android:drawable/ic_menu_preferences"/>
+</menu>
