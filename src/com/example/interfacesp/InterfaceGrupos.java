@@ -17,6 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class InterfaceGrupos extends ListActivity {
+	
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,12 @@ public class InterfaceGrupos extends ListActivity {
 		// asociar el codigo a la vista interfacegrupo1
 		setContentView(R.layout.interfacegrupo1);
 		
+		//bsdgrupos gbd = new bsdgrupos(getApplicationContext());
+		
+		//gbd.InsertarGrupo(1, "seguridad_informatica", "ramo_encargado_de_la_segurida", false);
+		//gbd.InsertarGrupo(2, "emergente_1", "android", false);
+		//gbd.InsertarGrupo(3, ".net", "Microsoft", false);
+
 		
 		ArrayList<String> locales = new ArrayList<String>();
 		locales.add("Grupo 1");
@@ -79,11 +87,13 @@ public class InterfaceGrupos extends ListActivity {
 		        			if (((CheckBox) v).isChecked()) {
 		        				Toast.makeText(InterfaceGrupos.this,
 		        			 	   "Entrando en "+o, Toast.LENGTH_SHORT).show();
+		        				//gbd.modificarGrupos(1 , "", "", true);
 		        			}
 		        			
 		        			else {
 		        				Toast.makeText(InterfaceGrupos.this,
 		        					 	   "Saliendo de "+o, Toast.LENGTH_SHORT).show();
+		        				//gbd.modificarGrupos(1 , "", "", false);
 		        			}
 		        		  }
 		        		});
