@@ -14,6 +14,8 @@ public class ListaGrupos{
         ListaGrupo.add("Hola");
         ListaGrupo.add("Como");
         ListaGrupo.add("estas");
+        ListaGrupo.add("Espero");
+        ListaGrupo.add("que bien");
         return ListaGrupo;
     }
 }
