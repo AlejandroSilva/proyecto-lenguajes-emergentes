@@ -3,7 +3,8 @@
 	android:id="@+id/widget0"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
-	xmlns:android="http://schemas.android.com/apk/res/android">
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@drawable/ST3">
 
 <TextView
 	android:id="@+id/tipogrupo"
@@ -13,7 +14,7 @@
 	android:layout_x="7dp"
 	android:layout_y="10dp"
 	android:onClick="InterfaceMensajes"
-	android:clickable="true"/>"
+	android:clickable="true"/>
 <TextView
 	android:id="@+id/asignatura"
 	android:layout_width="149dp"
