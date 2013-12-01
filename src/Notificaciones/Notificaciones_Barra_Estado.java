@@ -3,43 +3,31 @@ package Notificaciones;
 /**
  * Created by mario on 29-11-13.
  */
-import android.annotation.TargetApi;
+import java.util.Calendar;
+
+
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.TaskStackBuilder;
-import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
-import android.os.Bundle;
-
-import com.example.interfacesp.InterfaceGrupos;
 import com.example.interfacesp.InterfaceMensajes;
 import com.example.interfacesp.R;
+import android.support.v4.app.NotificationCompat;
 
-/**
- * Created by mario on 18-10-13.
- */
-public class Notificaciones_Barra_Estado extends Activity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.principal);
-    }
+public class Notificaciones_Barra_Estado {
 
-    public void Notificacion(){
-        NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        Intent intento = new Intent(getBaseContext(), InterfaceMensajes.class);
-        PendingIntent Pintent = PendingIntent.getActivity(getApplicationContext(), 0, intento, 0);
-        Notification.Builder crearNotificacion =
-                new Notification.Builder (this)
+    public static void mostrarNotificacion(String titulo, String contenido, Activity contexto){
+        NotificationManager nm = (NotificationManager)contexto.getSystemService(contexto.NOTIFICATION_SERVICE);
+        PendingIntent intencionPendiente = PendingIntent.getActivity(contexto, 0, new Intent(contexto, InterfaceMensajes.class), 0);
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(contexto)
                         .setSmallIcon(R.drawable.ic_launcher)
-                        .setContentTitle("saluos washos")
-                        .setContentText("dale click acá")
-                        .setContentIntent(Pintent);
-        Notification notificacion = crearNotificacion.build();
+                        .setContentTitle(titulo)
+                        .setContentText(contenido)
+                        .setContentIntent(intencionPendiente);
+        Notification notificacion = mBuilder.build();
         //esconde la notificación despues de seleccionarla
         notificacion.flags |= Notification.FLAG_AUTO_CANCEL;
         //sonido por defecto
