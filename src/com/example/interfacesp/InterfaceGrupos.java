@@ -32,7 +32,7 @@ public class InterfaceGrupos extends ListActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Apéndice de método generado automáticamente
+        // TODO Ap&#xfffd;ndice de m&#xfffd;todo generado autom&#xfffd;ticamente
 		super.onCreate(savedInstanceState);
 		// asociar el codigo a la vista interfacegrupo1
 		setContentView(R.layout.interfacegrupo1);

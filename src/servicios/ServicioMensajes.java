@@ -14,9 +14,9 @@ public class ServicioMensajes extends Service {
 	       
 	       /**
 	       		intent		intent usado en startService( intent );
-	       		flags		Información sobre como comienza la solicitud. Puede ser: 0, START_FLAG_REDELIVERY, START_FLAG_RETRY. 
-	       					Un valor distinto de 0 se utiliza para reiniciar un servicio tras detectar algún problema.
-	       		idArranque 	representa el numero de solicitud de arranque. Usar este mismo estero en el método stopSelfResult(int idArranque).
+	       		flags		Informalï¿½n sobre como comienza la solicitud. Puede ser: 0, START_FLAG_REDELIVERY, START_FLAG_RETRY.
+	       					Un valor distinto de 0 se utiliza para reiniciar un servicio tras detectar algï¿½n problema.
+	       		idArranque 	representa el numero de solicitud de arranque. Usar este mismo estero en el mï¿½todo stopSelfResult(int idArranque).
 	       		return		Como debe comportarse el sistema cuando el servicio sea matado. (ej. pore el sistema por falta de memoria)
 	       */
 	       @Override
