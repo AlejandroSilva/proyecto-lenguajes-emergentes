@@ -28,28 +28,15 @@ public class AplicacionWeb{
 		try {				
 			str = coneccion.GET_generico(urlLogin);
 			
-			//Log.i("INTERNET", "logeando con usuario:"+usuario+" y password:"+password);
 			Log.i("INTERNET", "El servidor responde correctamente: "+str);
 		} catch (ClientProtocolException e) {
 			Log.i("INTERNET", "CPE "+e.toString() );
-			throw new AppWebException("Problemas al conectar con el servidor");
-			
+			throw new AppWebException("Problemas con el cliente web");
 		} catch (IOException e) {
 			Log.i("INTERNET", "EXC "+e.toString() );
 			throw new AppWebException("Coneccion no disponible");
 		}
 		return str;
-		
-		// SEGUNDO: Convertir el String a JSON
-
-		//JSONObject jso_resumen;
-		//try{
-		//	jso_resumen = new JSONObject( strRespuesta );
-		//}catch( org.json.JSONException e2){
-		//	throw new Exception("JSON mal formateado o desconocido");
-		//}
-		
-		// TERCERO: se ha logeado correctamente?
 	}
 
 	
