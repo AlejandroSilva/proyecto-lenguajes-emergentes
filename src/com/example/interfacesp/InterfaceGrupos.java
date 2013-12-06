@@ -31,10 +31,9 @@ public class InterfaceGrupos extends ListActivity {
         ListaGrupos lista = new ListaGrupos();
         locales = lista.getLista();
 
-
-		//locales.add("Grupo 1");
-		//locales.add("Grupo 2");
-		//locales.add("Grupo 3");
+		locales.add("Grupo 1");
+		locales.add("Grupo 2");
+		locales.add("Grupo 3");
 
 		
 		IconListViewAdapter ilva = new IconListViewAdapter(this, R.layout.interfacegrupo, locales );
