@@ -1,10 +1,22 @@
 package com.example.interfacesp;
+import java.io.IOException;
 import java.util.ArrayList;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+
 import servicios.ServiceConfig;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,12 +37,10 @@ public class InterfaceGrupos extends ListActivity {
 		// asociar el codigo a la vista interfacegrupo1
 		setContentView(R.layout.interfacegrupo1);
 		
-		
 		ArrayList<String> locales = new ArrayList<String>();
 		locales.add("Grupo 1");
 		locales.add("Grupo 2");
 		locales.add("Grupo 3");
-		
 		
 		IconListViewAdapter ilva = new IconListViewAdapter(this, R.layout.interfacegrupo, locales );
 		setListAdapter(ilva);

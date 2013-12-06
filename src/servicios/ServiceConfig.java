@@ -1,6 +1,7 @@
 package servicios;
 import java.util.Calendar;
-import com.example.interfacesp.R;
+
+//import NotifacionManager.NotificacionManager;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -12,12 +13,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.example.interfacesp.R;
+
 public class ServiceConfig extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.service_config);
 		
+		// iniciar servicio
 		Button btnIniciar = (Button)findViewById(R.id.btn_iniciarServicio); 
 		btnIniciar.setOnClickListener( new OnClickListener() {
 			@Override
@@ -25,6 +29,7 @@ public class ServiceConfig extends Activity {
 				ServiceConfig.startService( getBaseContext() );
 			}
 		});
+		// detener servicio
 		Button btnDetener = (Button)findViewById(R.id.btn_detenerServicio);
 		btnDetener.setOnClickListener( new OnClickListener() {
 			@Override
@@ -32,6 +37,8 @@ public class ServiceConfig extends Activity {
 				ServiceConfig.stopService( getBaseContext() );
 			}
 		});
+		
+		//NotificacionManager.mostrarNotificacion("este es un titulo", "este es un contexto", this);
 	}
 	
 	
