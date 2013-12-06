@@ -29,7 +29,7 @@ public class AplicacionWeb{
 			str = coneccion.GET_generico(urlLogin);
 			
 			//Log.i("INTERNET", "logeando con usuario:"+usuario+" y password:"+password);
-			Log.i("INTERNET", "El servidor responde: "+str);
+			Log.i("INTERNET", "El servidor responde correctamente: "+str);
 		} catch (ClientProtocolException e) {
 			Log.i("INTERNET", "CPE "+e.toString() );
 			throw new AppWebException("Problemas al conectar con el servidor");
